@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+.login-page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.login-img-div{
+    width: 60%;
+    background: #FFFFFF;
+    opacity: 1;
+    padding: 2em;
+}
+.login-img{
+    height: auto;
+    width: 100%;
+    opacity: 1;
+}
+.login-details-div{
+    background: #FFFFFF;
+    opacity: 1;
+    width: 30%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+  	height: 100vh;
+}
+.login-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 80%;
+    /* padding: 5em 0; */
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .2em;
+    margin-bottom: 1.5em;
+}
+.heading h1{
+    margin: 0;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    
+    font-variant: normal;
+    font-style: normal;
+    font-weight: 600;
+    font-family: Proxima Nova;
+    font-size: 40px;
+    line-height: 50px;
+    /* font: normal normal 700 45px/54px Proxima Nova; */
+}
+.heading p{
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: capitalize;
+    opacity: 0.5;
+
+    font-weight: 600;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 17px;
+    font-variant: normal;
+    font-style: normal;
+    /* font: normal normal 600 14px/17px Proxima Nova; */
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5em;
+    padding: 1em 2em
+}
+.fields input{
+    border: none;
+    padding: .8em 0;
+    width: 100%;
+    outline: none;
+
+    font-weight: 600;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 17px;
+    font-variant: normal;
+    font-style: normal;
+    /* font: normal normal 600 14px/17px Proxima Nova; */
+    
+    letter-spacing: 0.56px;
+    color: #060606;
+    opacity: 1;
+}
+.fields > input{
+    margin-bottom: .8em;
+    border-bottom:2px solid #E9E9F0;
+}
+.pass-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.password-toggle-icon{
+    cursor: pointer;
+}
+
+.error-message{
+    padding: 0;
+    margin: 0;
+    align-self: flex-start;
+    display: inline;
+    color: red;
+    font-size: .8em;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.options div,a{
+    font-weight: 300;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 17px;
+    font-variant: normal;
+    font-style: normal;
+    margin: 0em 2em;
+    /* font: normal normal 300 14px/17px Proxima Nova; */
+
+    color: #000000;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+.options a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.options a:hover{
+    color: #2E4765;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.btns a,button{
+    width: 100%;
+    /* margin: .5em; */
+    cursor: pointer;
+    padding: 1em 0em;
+    border-radius: 4px; 
+    text-transform: capitalize;
+    text-align: center;
+    opacity: 1;
+    margin:2em;
+
+    font-weight: 600;
+    font-family: Proxima Nova;
+    font-size: 12px;
+    line-height: 15px;
+    font-variant: normal;
+    font-style: normal;
+    /* font: normal normal 600 16px/19px Proxima Nova; */
+}
+.btns button:hover{
+    scale: 1.1;
+}
+.btns a:hover{
+    scale: 1.1;
+}
+.login-btn{
+    color: #FFFFFF;
+    background-color: #2E4765;
+    border: 1px solid #43425D;
+}
+.signup-btn{
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border: 1px solid #2E4765;
+    color: #2E4765;
+}
+.btns .cursor-not-allowed{
+    cursor: not-allowed;
+}
+
+.terms{
+    font-family: Proxima Nova;
+    font-size: 15px;
+    line-height: 17px;
+    font-variant: normal;
+    font-style: normal;
+    /* justify-self: flex-end; */
+    /* font: normal normal normal 17px/20px Proxima Nova; */
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #2E4765;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1360px) {
+    .login-page{
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .login-img-div{
+        padding: 1em;
+    }
+    .login-img{
+        width: 100%;
+        height: auto;
+    }
+    .login-details-div{
+        width: 40%;
+        gap: 2em;
+    }
+    .login-details{
+        margin:0;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .login-page {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-img{
+        width: 100%;
+        height: auto;
+    }
+    .login-details-div {
+        height: auto;
+        width: 70%;
+        padding: 2em;
+        margin-bottom:0;
+        gap: 2em;
+    }
+    .btns {
+        flex-direction: column;
+    }
+    .btns button {
+        width: 90%;
+        margin: 0;
+        margin-top: 1em;
+    }
+    .terms{
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-page {
+        padding: 1em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-details-div {
+        width: 100%;
+        padding: 1em;
+        gap: 1em;
+        scale: 0.9;
+    }
+    .login-img-div{
+        width: 90%;
+    }
+    .login-img{
+        width: 80vw;
+        height: auto;
+    }
+
+    .heading h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+        line-height: 42px;
+    }
+
+    .heading p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .fields input {
+        width: 100%;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    .btns button {
+        width: 90%;
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .terms {
+        font-size: 14px;
+        margin-top: 1em;
+        position: relative;
+    }
+}

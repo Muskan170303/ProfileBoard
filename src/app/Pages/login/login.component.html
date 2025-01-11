@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="login-page">
+    <div class="login-img-div"><img class="login-img" src="../../assets/login-image.svg" alt=""></div>
+    <div class="login-details-div">
+        <div class="login-details">
+            <div class="heading">
+                <h1>PROJECT NAME</h1>
+                <p>Welcome Back! Please Login To Your Account.</p>
+            </div>
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                <div class="fields">
+                    <input type="email" placeholder="Email" id="email" name="email" [(ngModel)]="email" autofocus required>
+                    <div class="error-message" *ngIf="email && !regexValidator.test(email)">
+                        <span>Enter a valid Email!</span>
+                    </div>
+                    <hr>
+                    <div class="pass-div">
+                        <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="password" required>
+                        <span class="password-toggle-icon" (click)="toggleFunction()">
+                            <i class="fas fa-eye" style="color: #77767b;" [ngClass]="{'fa-eye-slash': isPasswordVisible, 'fa-eye': !isPasswordVisible}"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="options">
+                    <div><input id="check" type="checkbox"><Label for="check">Remember me</Label></div>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="btns">
+                    <button class="login-btn" [disabled]="!validateForm()" [ngClass]="{'cursor-not-allowed':!isValidated}">Login</button>
+                    <button routerLink="/signup" class="signup-btn">Sign Up</button>
+                </div>
+            </form>
+        </div>    
+        <span class="terms">Term Of Use. Privacy Policy</span>
+    </div>
+</div>
